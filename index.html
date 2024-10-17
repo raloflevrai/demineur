@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>SpeedMiner</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/vnd.icon" href="mine.ico">
+    </head>
+
+    <body>
+        <!-- Titre principal du site -->
+        <header>
+            <h1>SpeedMiner</h1>
+            <p>Dévoile toutes les cases rapidement pour monter dans le classement mais attention à ne pas exploser !</p>
+        </header>
+             <!-- Conteneur principal pour les trois colonnes -->
+        <div class="container">
+            <!-- Première colonne : réglages du jeu -->
+            <div class="column" id="settings">
+                <h2>Difficulté</h2>
+                <!--<table>
+                    <tr>
+                        <td>Largeur (11 max)</td>
+                        <td>
+                            <input type="number" value="8" placeholder="Largeur" id="x"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hauteur (11 max)</td>
+                        <td>
+                            <input type="number" value="8" placeholder="Hauteur" id="y"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nombre de mines</td>
+                        <td>
+                            <input type="number" value="8" placeholder="Nombre de mines" id="nb_mine"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="Générer le terrain" onClick="changerTerrain()"/>
+                        </td>
+                    </tr>
+                </table>-->
+                <table>
+		            <tr>
+		            	<td>
+		            		<input type="button" value="Facile" onClick="facile()"/>
+		            	</td>
+		            </tr>
+		            <tr>
+		            	<td>
+		            		<input type="button" value="Pas facile" onClick="pasFacile()"/>
+		            	</td>
+		            </tr>
+		            <tr>
+		            	<td>
+		            		<input type="button" value="Vraiment pas facile" onClick="VPFacile()"/>
+		            	</td>
+		            </tr>
+		            <tr>
+		            	<td>
+		            		<input type="button" value="Dur" onClick="dur()"/>
+		            	</td>
+		            </tr>
+                </table>
+            </div>
+
+            <!-- Deuxième colonne : plateau de jeu -->
+            <div class="column" id="game-board">
+                <h2>Plateau de jeu</h2>
+				<div id="timer">00'00s</div> <!-- Chronomètre -->
+                <div id="plateau">
+                    <!-- Le plateau sera généré ici -->
+                </div>
+            </div>
+
+            <!-- Troisième colonne : leaderboard -->
+            <div class="column" id="leaderboard">
+                <h2>Leaderboard</h2>
+                <table>
+                    <tr>
+                        <th>Joueur</th>
+                        <th>Temps</th>
+                        <th>Classement</th>
+                    </tr>
+                    <!-- Exemple de joueurs -->
+                    <tr>
+                        <td>Alice</td>
+                        <td>120s</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Bob</td>
+                        <td>150s</td>
+                        <td>2</td>
+                    </tr>
+                    <!-- Ajouter d'autres joueurs ici -->
+                </table>
+            </div>
+        </div>
+		<dialog id="defeat">
+			<div id="dialogDefeat">
+				<h1>Perdu ! Essaie encore</h1>
+				<input id="relancerBouton" type="button" value="Réessayer" onClick="changerTerrain()"/>
+			</div>
+		</dialog>
+		<dialog id="victory">
+			<div id="dialogVictory">
+				<h1>Bravo ! Tu as speedminé en :</h1>
+				<div id="victoryTime">
+					<h1>00'00s</h1>
+				</div>
+				<h2>Rentre ton pseudo pour entrer au classement :</h2>
+				<input type="text" placeholder="Entre ton pseudo" id="pseudo"/>
+			</div>
+		</dialog>
+        <script src="script.js"></script>
+    </body>
+</html>

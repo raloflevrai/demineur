@@ -108,12 +108,15 @@
 		</dialog>
 		<dialog id="victory">
 			<div id="dialogVictory">
-				<h1>Bravo ! Tu as speedminé en :</h1>
-				<div id="victoryTime">
-					<h1>00'00s</h1>
-				</div>
-				<h2>Rentre ton pseudo pour entrer au classement :</h2>
-				<input type="text" placeholder="Entre ton pseudo" id="pseudo"/>
+				<form action="insert.php" method="GET">
+					<h1>Bravo ! Tu as speedminé en :</h1>
+					<div id="victoryTime">
+						<h1>00'00s</h1>
+					</div>
+					<h2>Rentre ton pseudo pour entrer au classement :</h2>
+					<input type="text" name="name" placeholder="Entre ton pseudo" required /> <br>
+					<input type="submit" value="Valider"/>
+				</form>
 			</div>
 		</dialog>
         <script src="script.js"></script>

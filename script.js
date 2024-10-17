@@ -40,13 +40,13 @@ var COULEUR_CHIFFRE = "#beffc0";
 var facile = function(){
 	x = 7;
 	y = 7;
-	nb_mine = 8;
+	nb_mine = 1;
 	changerTerrain();
 }
 var pasFacile = function(){
 	x = 8;
 	y = 8;
-	nb_mine = 12;
+	nb_mine = 13;
 	changerTerrain();
 }
 var VPFacile = function(){
@@ -332,6 +332,7 @@ var testGagne = function(){
   continuerJeu = false;
   stopTimer(); // Arrête le chronomètre
   var pseudo = document.getElementById("pseudo").value;
+  document.getElementById('leaderBoard').textContent = pseudo;
   
 }
 
